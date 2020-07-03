@@ -1,0 +1,334 @@
+// Para los estilos de la etiqueta header y todo lo que contenga dicha etiqueta, puedo crear distintos tipos de header con distinta distribución de los elementos clasico (menu, logo, iconos a redes sociales)
+
+.Header{
+  position: fixed;
+  border: 2px solid blue;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: capa(capa10);
+  max-width: $ancho-maximo;
+  height: $altura-header;
+  line-height: $altura-header;
+  line-height: $altura-header;
+  padding: 0 1rem;
+  & .Logo{
+    position: absolute;
+    height: $altura-header;
+    line-height: $altura-header;
+    z-index: capa(capa1);
+    & a{
+      display: grid;
+      width: auto;
+      height: $altura-header;
+      align-content: center;
+    }
+    & img{
+      width: auto;
+      height: $altura-header;
+    }
+  }
+  & .Panel-btn{
+    position: absolute;
+    z-index: capa(capa10);
+    right: .5rem;
+  }
+  & .Panel{
+    position: fixed;
+    z-index: capa(capa9);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% + 5rem);
+    overflow-y: auto;
+    transform: translate(100%, 0);
+    transition: transform .5s ease;
+    &.is-active{
+      transform: translate(0,0);
+    }
+  }
+}
+
+.hamburger{
+  &:hover{
+    opacity: 1;
+  }
+  &:focus{
+    outline: 0;
+    border: 0;
+  }
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+  background-color: blue;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after{
+  background-color: red;
+}
+
+.Menu{
+  margin: 0 auto;
+  padding-top: $altura-header;
+  text-align: center;
+  height: calc(100% - 5rem);
+  background: green;
+  & ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+}
+
+// .Header{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: capa(capa10);
+//   max-width: $ancho-maximo;
+//   height: $altura-header;
+//   line-height: $altura-header;
+//   padding: 0 1rem;
+//   @include mq(lgs){
+//     display: flex;
+//   }
+//   & .Logo{
+//     position: absolute;
+//     height: $altura-header;
+//     line-height: $altura-header;
+//     z-index: capa(capa1);
+//     @include mq(mdl){
+//       position: static;
+//       width: 50%;
+//     }
+//     & a{
+//       display: grid;
+//       width: auto;
+//       height: $altura-header;
+//       align-content: center;
+//     }
+//     & img{
+//       width: auto;
+//       height: $altura-header;
+//     }
+//   }
+//   & .Panel{
+//     position: relative;
+//     z-index: capa(capa9);
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     height: calc(100% + 5rem);
+//     overflow-y: auto;
+//     transition: transform .5s ease;
+//     // De arriba
+//     // transform: translate(0, -100%);
+//     // // De la izquierda
+//     // transform: translate(-100%, 0);
+//     // // De abajo
+//     // transform: translate(0, 100%);
+//     // De la derecha
+//     transform: translate(100%, 0);
+//     @include mq(lgs){
+//       position: static;
+//       width: 60%;
+//       display: flex;
+//       overflow-y: visible;
+//       background-color: transparent;
+//       transform: translate(0,0);
+//     }
+//     &.is-active{
+//       transform: translate(0,0);
+//     }
+//     &-btn{
+//       position: absolute;
+//       z-index: capa(capa10);
+//       top: 0;
+//       right: 0;
+//       padding-right: 0;
+//       @include mq(lgs){
+//         display: none;
+//       }
+//     }
+//     &-btn.is-active{
+//       position: relative;
+//       right: 1rem;
+//     }
+//   }
+// }
+
+// // .Header{
+// //   position: fixed;
+// //   top: 0;
+// //   left: 0;
+// //   right: 0;
+// //   z-index: capa(capa10);
+// //   max-width: $ancho-maximo;
+// //   height: $altura-header;
+// //   line-height: $altura-header;
+// //   padding: 0 1rem;
+// //   border: 2px solid red;
+// //   @include mq(lgs){
+// //     display: flex;
+// //   }
+// //   & .Logo{
+// //     position: absolute;
+// //     height: $altura-header;
+// //     line-height: $altura-header;
+// //     z-index: capa(capa1);
+// //     @include mq(mdl){
+// //       position: static;
+// //       width: 50%;
+// //     }
+// //     & a{
+// //       display: grid;
+// //       width: auto;
+// //       height: $altura-header;
+// //       align-content: center;
+// //     }
+// //     & img{
+// //       width: auto;
+// //       height: $altura-header;
+// //     }
+// //   }
+// //   & .Panel{
+// //     border: 2px solid blue;
+// //     position: relative;
+// //     z-index: capa(capa9);
+// //     top: 0;
+// //     bottom: 0;
+// //     left: 0;
+// //     right: 0;
+// //     width: 100%;
+// //     height: calc(100% + 5rem);
+// //     overflow-y: auto;
+// //     transition: transform .5s ease;
+// //   }
+// // }
+
+// .hamburger{
+//   &:hover{
+//     opacity: 1;
+//   }
+//   &:focus{
+//     outline: 0;
+//     border: 0;
+//   }
+// }
+
+// .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+//   background-color: color(secondary);
+//   // position: fixed;
+//   // right: .5rem;
+// }
+
+// .hamburger.is-active .hamburger-inner,
+// .hamburger.is-active .hamburger-inner::before,
+// .hamburger.is-active .hamburger-inner::after{
+//   background-color: white;
+// }
+
+// .Panel{
+//   position: fixed;
+//   z-index: capa(capa9);
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: calc(100% + 5rem);
+//   overflow-y: auto;
+//   transition: transform .5s ease;
+//   // De arriba
+//   // transform: translate(0, -100%);
+//   // // De la izquierda
+//   // transform: translate(-100%, 0);
+//   // // De abajo
+//   // transform: translate(0, 100%);
+//   // De la derecha
+//   transform: translate(100%, 0);
+//   @include mq(lgs){
+//     position: static;
+//     width: 60%;
+//     display: flex;
+//     overflow-y: visible;
+//     background-color: transparent;
+//     transform: translate(0,0);
+//   }
+//   &.is-active{
+//     transform: translate(0,0);
+//   }
+//   &-btn{
+//     position: absolute;
+//     z-index: capa(capa10);
+//     top: -.5rem;
+//     right: 0;
+//     padding-right: 0;
+//     border: 2px solid green;
+//     @include mq(lgs){
+//       display: none;
+//     }
+//   }
+//   &-btn.is-active{
+//     position: fixed;
+//     right: 1rem;
+//   }
+// }
+
+// .Menu{
+//   margin: 0 auto;
+//   padding-top: $altura-header;
+//   text-align: center;
+//   height: 100%;
+//   background: color(secondary);
+//   @include mq(lgs){
+//     width: 100%;
+//     padding-top: 0;
+//     height: $altura-header;
+//     background: transparent;
+//   }
+//   & ul{
+//     display: flex;
+//     flex-direction: column;
+//     list-style: none;
+//     @include mq(lgs){
+//       flex-direction: row;
+//       justify-content: flex-end;
+//     }
+//   }
+//   & li{
+//     margin-left: 0;
+//     line-height: 3.5rem;
+//     @include mq(sm){
+//       line-height: 4rem;
+//     }
+//     @include mq(lgs){
+//       margin-left: .5rem;
+//       line-height: 5rem;
+//     }
+//   }
+//   & a{
+//     display: block;
+//     font-size: 1.5rem;
+//     text-decoration: none;
+//     color: color(primary);
+//     transition: all .3s ease;
+//     @include mq(lgs){
+//       padding: 0 .5rem;
+//       font-size: 1rem;
+//     }
+//     @include mq(lgm){
+//       font-size: 1.3rem;
+//     }
+//     &:hover{
+//       background-color: color(secondary);
+//     }
+//   }
+// }
