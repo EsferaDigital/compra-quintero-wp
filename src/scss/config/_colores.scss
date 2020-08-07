@@ -9,16 +9,20 @@
 
 
 $colors:(
-  primary: hsl(227, 88%, 60%),
-  secondary: red,
-  footer: hsl(231, 61%, 11%),
-  tertiary: hsl(179, 100%, 40%),
-  alert: #ab1217
+  primario: #cb6221,
+  secundario:#da9332,
+  terciario: #3A8DB5,
+  hover: #dabc94,
+  alerta: #ab1217,
+  blanco: #ffffff,
+  gris: #505050
 );
 
 $fondo-transparente: rgba(9, 10, 7, 0.8);
 
 $fondo-transparente: rgba(9, 10, 7, 0.8);
+
+$degradado: linear-gradient(to bottom, rgba(203,98,33,1) 0%, rgba(218,147,50,1) 100%);
 
  // Con esta función, para capturar el color bastaria poner, por ejemplo:
  //

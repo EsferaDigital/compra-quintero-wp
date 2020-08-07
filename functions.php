@@ -16,12 +16,12 @@ if(!isset($content_width)){
 }
 
 //Establecer variables globales y asignar un valor a esas variables
-global $google_fonts;
+// global $google_fonts;
 global $font_awesome;
 global $hamburgers;
 global $Jquery;
 
-$google_fonts = 'https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans&display=swap';
+// $google_fonts = 'https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans&display=swap';
 $font_awesome = 'https://use.fontawesome.com/releases/v5.7.2/css/all.css';
 $hamburgers = 'https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css';
 $Jquery = 'https://code.jquery.com/jquery-3.4.1.min.js';
@@ -33,7 +33,7 @@ $Jquery = 'https://code.jquery.com/jquery-3.4.1.min.js';
 if(!function_exists('qtr_scripts')):
   function qtr_scripts() {
     // Declaramos variables
-    global $google_fonts;
+    // global $google_fonts;
     global $font_awesome;
     global $hamburgers;
     global $Jquery;
@@ -45,7 +45,7 @@ if(!function_exists('qtr_scripts')):
 
     wp_register_style('iconos', $font_awesome, array(), '5.7.2', 'all' );
     wp_register_style('hamburgers', $hamburgers, array(), '1.1.3', 'all' );
-    wp_register_style('fuentes', $google_fonts, array(), '1.0.0', 'all' );
+    // wp_register_style('fuentes', $google_fonts, array(), '1.0.0', 'all' );
     wp_register_style('style', $style, array(), '1.0.0', 'all' );
 
     // Registramos los archivos js
@@ -74,7 +74,7 @@ if(!function_exists('qtr_scripts')):
 
     wp_register_script('globaljs', get_template_directory_uri() . '/assets/js/bundle.js', array(), '1.0.0', true);
 
-    wp_enqueue_style('fuentes');
+    // wp_enqueue_style('fuentes');
     wp_enqueue_style('iconos');
     wp_enqueue_style('hamburgers');
     wp_enqueue_style('style');

@@ -5,7 +5,7 @@
     else:
   ?>
     <a href="<?php echo esc_url(home_url('/')); ?>">
-      <img src="<?php echo get_template_directory_uri() . '/assets/img/custom-logo.svg'; ?>" alt="<?php bloginfo('name'); ?>">
+      <img src="<?php echo get_template_directory_uri() . '/assets/img/logo-municipio.png'; ?>" alt="<?php bloginfo('name'); ?>">
     </a>
     <?php endif; ?>
 </div>

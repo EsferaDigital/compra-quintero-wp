@@ -4,7 +4,7 @@
   "description": "Theme para compra en Quintero",
   "main": "app.js",
   "scripts": {
-    "start": "webpack --mode development --watch",
+    "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

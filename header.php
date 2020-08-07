@@ -9,9 +9,11 @@
 </head>
 <body <?php body_class(''); ?>>
   <header class="Header" id="Header">
-    <?php
-      get_template_part('template-parts/header-logo');
-      get_template_part('template-parts/header-menu');
-    ?>
+    <div class="contenedor">
+      <?php
+        get_template_part('template-parts/header-logo');
+        get_template_part('template-parts/header-menu');
+      ?>
+    </div>
   </header>
   <div class="Container-central">
